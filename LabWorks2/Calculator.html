@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roberto's Calculator</title>
 </head>
+<script>
+    function display(i){
+        var textBox = document.getElementById("textbox");
+        var button = document.getElementById(i);
+        textBox.value += button.value;
+    }
+
+    function clearTextBox(){
+       document.getElementById("textbox").value = "";
+    }
+
+    function equals(){
+        var statement = document.getElementById("textbox").value;
+        var answer = eval(statement);
+        document.getElementById("textbox").value = answer;
+    }
+</script>
 <body style="background-color: darkkhaki">
     <div id="calc-body" style="background-color: whitesmoke;margin-bottom: 
     100px;margin-top: 80px;margin-left: 260px;margin-right: 260px;border-radius: 2%;padding-top: 10px;
     border: 2px solid black; box-shadow: 0 5px 5px 5px black;"> 
         <center>
-            <div style="padding-bottom: 10px">
-                <input type="text" readonly/>
+            <div id="top-box" style="padding-bottom: 10px">
+                <input type="text" id="textbox" value="" readonly/>
             </div>
-            <div>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">1</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">2</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">3</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">4</button>
+            <div id="top-row">
+                <input type="button" name="1" id="1" value ="1" onclick="javascript:display(1)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="2" id="2" value ="2" onclick="javascript:display(2)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="3" id="3" value ="3" onclick="javascript:display(3)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="4" id="4" value ="4" onclick="javascript:display(4)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
             </div>
-            <div>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">5</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">6</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">7</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">8</button>
+            <div id="second-row">
+                <input type="button" name="5" id="5" value ="5" onclick="javascript:display(5)" style="display:inline-block;padding: 2px 10px;width: 40px;margin-top: 5px"/>
+                <input type="button" name="6" id="6" value ="6" onclick="javascript:display(6)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="7" id="7" value ="7" onclick="javascript:display(7)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="8" id="8" value ="8" onclick="javascript:display(8)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
             </div>
-            <div>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">9</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">0</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">+</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">-</button>
+            <div id="third-row">
+                <input type="button" name="9" id="9" value ="9" onclick="javascript:display(9)" style="display:inline-block;padding: 2px 10px;width: 40px;margin-top: 5px"/>
+                <input type="button" name="0" id="0" value ="0" onclick="javascript:display(0)" style="display:inline-block;padding: 2px 10px;width: 40px"/>
+                <input type="button" name="plus" id="+" value ="+" onclick="javascript:display('+')" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :firebrick;border:1px solid black;border-radius: 4%;"/>
+                <input type="button" name="sub" id="-" value ="-" onclick="javascript:display('-')" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :lightskyblue;border:1px solid black;border-radius: 4%"/>
             </div>
-            <div style="padding-bottom: 10px">
-                <button style="display:inline-block;padding: 0 10px;width: 40px">*</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">/</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">=</button>
-                <button style="display:inline-block;padding: 0 10px;width: 40px">C</button>
+            <div id="last-row" style="padding-bottom: 10px">
+                <input type="button" name="mul" id="*" value ="*" onclick="javascript:display('*')" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :lightgreen;border:1px solid black;border-radius: 4%;margin-top: 5px"/>
+                <input type="button" name="div" id="/" value ="/" onclick="javascript:display('/')" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :goldenrod;border:1px solid black;border-radius: 4%"/>
+                <input type="button" name="equa" id="=" value ="=" onclick="javascript:equals()" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :lightpink;border:1px solid black;border-radius: 4%"/>
+                <input type="button" name="clear" id="C" value ="C" style="display:inline-block;padding: 3px 10px;width: 40px;background-color
+                :mediumslateblue;border:1px solid black;border-radius: 4%;" onclick="javascript:clearTextBox()"/>
             </div>
         </center>
     </div>
