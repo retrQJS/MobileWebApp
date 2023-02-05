@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+</head>
+<script>
+    function display(i){
+        document.getElementById("textbox").value += document.getElementById(i).value;
+    }
+    
+    function clearBox(){
+        document.getElementById("textbox").value = "";
+    }
+
+    function clearWordBank(){
+        document.getElementById("bot-text").value = "";
+    }
+
+    function display2(){
+        document.getElementById("bot-text"). value  += document.getElementById("textbox").value + "\n";
+    }
+</script>
+<body bgcolor="lightgreen">
+    <center>
+        <div style="margin-top: 50px; margin-bottom: 10px">
+            <input id="C" value="C" onclick="display('C')" type="button"/>
+            <input id ="O" value = "O" onclick="display('O')"type="button"/>
+            <input id ="M" value = "M" onclick="display('M')"type="button"/>
+            <input id ="F" value = "F" onclick="display('F')"type="button"/>
+            <input id ="O" value = "O" onclick="display('O')"type="button"/>
+            <input id ="R" value = "R" onclick="display('R')" type="button"/>
+            <input id ="T" value = "T" onclick="display('T')" type="button"/>
+            <input id ="A" value = "A" onclick="display('A')"type="button"/>
+            <input id ="B" value = "B" onclick="display('B')"type="button"/>
+            <input id ="L" value = "L" onclick="display('L')"type="button"/>
+            <input id ="E" value = "E" onclick="display('E')"type="button"/>
+        </div>
+        <input id="textbox" type="text" style="margin-bottom: 10px;justify-content: center" readonly/> <br>
+        <input id="word-add" type="button" onclick="display2()" value="Add Word"/>
+        <input id="clear" type="button" onclick="clearBox()" value="Clear Textbox"/>
+        <input id="clear-wb" type="button" onclick="clearWordBank()" value="Clear Wordbank"/>
+        <div style="margin-top: 5px;margin-left: 200px; margin-right: 200px">
+            <p id="title1" style="margin-top: -5px;margin-bottom: -1px">WORD BANK:</p>
+            <textarea id="bot-text" rows="4" cols="40"></textarea>
+        </div>
+    </center>
+</body>
+</html>
