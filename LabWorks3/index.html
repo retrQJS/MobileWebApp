@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js"></script>
+    <title>ROBSTORE | Online Shopping Store</title>
+</head>
+<body>
+    <div id="banner">
+        <img id="logo" src="./images/divshopping.png"/>
+        <input id="cart" type="button" onclick="popupfunction(11)" value="🛒Cart">
+    </div>
+    <div id="popup11" class="white_content">
+        <p align=center><br><br>
+            <center>
+                <p id="cart-title"><strong>CART:</strong></p>
+                <input readonly id="cart-items" type="text">
+            </center>
+                <p class="inline" id="total">Total: </p>
+                <p class="inline" id="amount">$0</p>
+            <center>
+                <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('11')" class=linktext value="Close Cart">
+            </center>
+        </p>
+    </div>
+    <div id="fade11" class="black_content"></div>
+    <div id="menu">
+        <center>
+            <ul>
+                <li class="menu-item"><a href="#" class="drp">New Arrivals</a>
+                    <div class="menu-content">
+                        <a href="#">Recent Chips</a><br>
+                        <a href="#">MicroControllers</a><br>
+                        <a href="#">CPUs and GPUs</a><br>
+                    </div>
+                    </li>
+
+                <li class="menu-item"><a href="#" class="drp">Computers/Laptops</a>	
+                <div class="menu-content">
+                    <a href="#">Laptops</a><br>
+                    <a href="#">Pre-Built PCs</a><br>
+                    <a href="#">Desktops</a><br>
+                </div>
+                </li>
+                <li class="menu-item"><a href="#" class="drp">Mobile Devices</a>	
+                <div class="menu-content">
+                    <a href="#">iPhones</a><br>
+                    <a href="#">Android</a><br>
+                    <a href="#">Samsung</a><br>
+                </div>
+                </li>
+                <li class="menu-item"><a href="#" class="drp">Miscellaneous</a>	
+                <div class="menu-content">
+                    <a href="#">Phone Cases</a><br>
+                    <a href="#">Phone Chargers</a><br>
+                    <a href="#">Mouse and Keyboard</a><br>
+                </div>
+                </li>
+            </ul>
+        </center>
+    </div>
+    <div class="parent">
+        <!--Box 1-->
+        <div class="box" onclick="popupfunction(1)">
+            <center>
+                <img id="mac" class="image-width" src="./images/laptop1.jpg">
+                <p class="bot-text">Mac Book Air</p>
+            </center>
+        </div>
+	    <div id="popup1" class="white_content">
+        <p align=center><br><br>
+            <center>
+            <img class="window-img"src="./images/laptop1.jpg" width=60% /><br>Mac Book Air<br><br>
+            <p class="price">Price: $800</p>
+            <p class="ratings">Ratings: 8.9/10.0</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('1')" class=linktext value="Close Window">
+            <input class="close-but" type="button" onclick="add_to_cart('Mac Book Air')" value="Add to Cart"/>
+            </center>
+            </p>
+        </div>
+        <div id="fade1" class="black_content"></div>
+        <!--Box 2-->
+        <div class="box" onclick="popupfunction(2)">
+            <center>
+                <img id="vivo" class="image-width" src="./images/vivo.jpg">
+                <p class="bot-text">ASUS VivoBook</p>
+            </center>
+        </div>
+        <div id="popup2" class="white_content">
+            <p align=center><br><br>
+                <center>
+                <img class="window-img" src="./images/vivo.jpg" width=60% /><br>ASUS VivoBook<br><br>
+                <p class="price">Price: $640</p>
+                <p class="ratings">Ratings: 6.9/10.0</p>
+                <p class="stars">⭐⭐⭐</p>
+                <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('2')" class=linktext value="Close Window">
+                <input class="close-but" type="button" onclick="add_to_cart('ASUS VivoBook')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade2" class="black_content"></div>
+        <!--Box 3-->
+        <div class="box" onclick="popupfunction(3)">
+            <center>
+                <img id="acer" class="image-width" src="./images/acer.jpg">
+                <p class="bot-text">ACER S15</p>
+            </center>
+        </div>
+        <div id="popup3" class="white_content">
+            <p align=center><br><br>
+                <center>
+                <img id="acer-wd" class="window-img" src="./images/acer.jpg" width=60% /><br>ACER S15<br><br>
+                <p class="price">Price: $744</p>
+                <p class="ratings">Ratings: 4.8/10.0</p>
+                <p class="stars">⭐⭐</p>
+                <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext value="Close Window">
+                <input class="close-but" type="button" onclick="add_to_cart('Acer S15')" value="Add to Cart"/>
+                 </center>
+            </p>
+        </div>
+        <div id="fade3" class="black_content"></div>
+         <!--Box 4-->
+        <div class="box" onclick="popupfunction(4)">
+            <center>
+                <img id="surface" class="image-width" src="./images/surface.png">
+                <p class="bot-text">WD Surface</p>
+            </center>
+        </div>
+        <div id="popup4" class="white_content">
+            <p align=center><br><br>
+                <center>
+                <img src="./images/surface.png" width=60% /><br>WD Surface<br><br>
+                <p class="price">Price: $900</p>
+                <p class="ratings">Ratings: 8.5/10.0</p>
+                <p class="stars">⭐⭐⭐⭐</p>
+                <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('4')" class=linktext value="Close Window">
+                <input class="close-but" type="button" onclick="add_to_cart('WD Surface')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade4" class="black_content"></div>
+         <!--Box 5-->
+        <div class="box" onclick="popupfunction(5)">
+            <center>
+                <img id="lenovo" class="image-width" src="./images/lenovo.png">
+                <p class="bot-text">Lenovo R13</p>
+            </center>
+        </div>
+        <div id="popup5" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="lenovo-wd" src="./images/lenovo.png" width=60% /><br>WD Surface<br><br>
+                    <p class="price">Price: $400</p>
+                    <p class="ratings">Ratings: 7.0/10.0</p>
+                    <p class="stars">⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('5')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo R13')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade5" class="black_content"></div>
+         <!--Box 6-->
+        <div class="box" onclick="popupfunction(6)">
+            <center>
+                <img class="image-width" src="./images/gamer.jpg">
+                <p class="bot-text">Lenovo Legion</p>
+            </center>
+        </div>
+        <div id="popup6" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="lenovo-wd" src="./images/gamer.jpg" width=60% /><br>Lenovo Legion<br><br>
+                    <p class="price">Price: $1200</p>
+                    <p class="ratings">Ratings: 9.5/10.0</p>
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('6')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo Legion')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade6" class="black_content"></div>
+         <!--Box 7-->
+        <div class="box" onclick="popupfunction(7)">
+            <center>
+                <img class="image-width" src="./images/msi.jpg">
+                <p class="bot-text">MSI G66</p>
+            </center>
+        </div>
+        <div id="popup7" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="lenovo-wd" src="./images/msi.jpg" width=60% /><br>MSI G66<br><br>
+                    <p class="price">Price: $1350</p>
+                    <p class="ratings">Ratings: 8.8/10.0</p>
+                    <p class="stars">⭐⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('7')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('MSI G66')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade7" class="black_content"></div>
+         <!--Box 8-->
+        <div class="box" onclick="popupfunction(8)">
+            <center>
+                <img class="image-width" src="./images/thinkpad.jpg">
+                <p class="bot-text">ThinkPad</p>
+            </center>
+        </div>
+        <div id="popup8" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="thinkpad" src="./images/thinkpad.jpg" width=60% /><br>ThinkPad<br><br>
+                    <p class="price">Price: $300</p>
+                    <p class="ratings">Ratings: 6.7/10.0</p>
+                    <p class="stars">⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('8')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo ThinkPad')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade8" class="black_content"></div>
+         <!--Box 9-->
+        <div class="box" onclick="popupfunction(9)">
+            <center>
+                <img class="image-width" src="./images/tuf.jpg">
+                <p class="bot-text">ASUS TUF</p>
+            </center>
+        </div>
+        <div id="popup9" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="thinkpad" src="./images/tuf.jpg" width=60% /><br>ThinkPad<br><br>
+                    <p class="price">Price: $2000</p>
+                    <p class="ratings">Ratings: 10.0/10.0</p>
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('9')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('ASUS TUF')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade9" class="black_content"></div>
+         <!--Box 10-->
+        <div class="box" onclick="popupfunction(10)">
+            <center>
+                <img class="image-width" src="./images/G16.jpg">
+                <p class="bot-text">Dell G16</p>
+            </center>
+        </div>
+        <div id="popup10" class="white_content">
+            <p align=center><br><br>
+                <center>
+                    <img id="thinkpad" src="./images/G16.jpg" width=60% /><br>Dell G16<br><br>
+                    <p class="price">Price: $1500</p>
+                    <p class="ratings">Ratings: 9.2/10.0</p>
+                    <p class="stars">⭐⭐⭐</p>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('10')" class=linktext value="Close Window">
+                    <input class="close-but" type="button" onclick="add_to_cart('Dell G16')" value="Add to Cart"/>
+                </center>
+            </p>
+        </div>
+        <div id="fade10" class="black_content"></div>
+      </div>
+</body>
+</html>
