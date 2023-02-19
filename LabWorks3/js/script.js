@@ -21,8 +21,10 @@ function display_desc(x)
         prev_x = x;
 }
 
-function add_to_cart(x){
-    alert("Successfully added item to cart.")
-    var element = "+" + x;
-    document.getElementById("cart-items").value += element;
+function add_to_cart(x, price){
+    alert("Successfully added item to cart.");
+    document.getElementById("cart-items").value += x + "                     $" + price + "\n";
+    amount = document.getElementById("amount");
+    Totalprice = parseInt(amount.textContent) + price;
+    amount.textContent = Totalprice;
 }

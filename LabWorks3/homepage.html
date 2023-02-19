@@ -17,10 +17,10 @@
         <p align=center><br><br>
             <center>
                 <p id="cart-title"><strong>CART:</strong></p>
-                <input readonly id="cart-items" type="text">
+                <textarea id="cart-items"></textarea>
             </center>
-                <p class="inline" id="total">Total: </p>
-                <p class="inline" id="amount">$0</p>
+                <p class="inline" id="total">Total($): </p>
+                <p class="inline" id="amount">0</p>
             <center>
                 <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('11')" class=linktext value="Close Cart">
             </center>
@@ -78,7 +78,7 @@
             <p class="ratings">Ratings: 8.9/10.0</p>
             <p class="stars">⭐⭐⭐⭐⭐</p>
             <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('1')" class=linktext value="Close Window">
-            <input class="close-but" type="button" onclick="add_to_cart('Mac Book Air')" value="Add to Cart"/>
+            <input class="close-but" type="button" onclick="add_to_cart('Mac Book Air', 800)" value="Add to Cart"/>
             </center>
             </p>
         </div>
@@ -98,7 +98,7 @@
                 <p class="ratings">Ratings: 6.9/10.0</p>
                 <p class="stars">⭐⭐⭐</p>
                 <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('2')" class=linktext value="Close Window">
-                <input class="close-but" type="button" onclick="add_to_cart('ASUS VivoBook')" value="Add to Cart"/>
+                <input class="close-but" type="button" onclick="add_to_cart('ASUS VivoBook', 640)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -118,7 +118,7 @@
                 <p class="ratings">Ratings: 4.8/10.0</p>
                 <p class="stars">⭐⭐</p>
                 <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext value="Close Window">
-                <input class="close-but" type="button" onclick="add_to_cart('Acer S15')" value="Add to Cart"/>
+                <input class="close-but" type="button" onclick="add_to_cart('Acer S15', 744)" value="Add to Cart"/>
                  </center>
             </p>
         </div>
@@ -138,7 +138,7 @@
                 <p class="ratings">Ratings: 8.5/10.0</p>
                 <p class="stars">⭐⭐⭐⭐</p>
                 <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('4')" class=linktext value="Close Window">
-                <input class="close-but" type="button" onclick="add_to_cart('WD Surface')" value="Add to Cart"/>
+                <input class="close-but" type="button" onclick="add_to_cart('WD Surface', 900)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -158,7 +158,7 @@
                     <p class="ratings">Ratings: 7.0/10.0</p>
                     <p class="stars">⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('5')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo R13')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo R13', 400)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -178,7 +178,7 @@
                     <p class="ratings">Ratings: 9.5/10.0</p>
                     <p class="stars">⭐⭐⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('6')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo Legion')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo Legion', 1200)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -198,7 +198,7 @@
                     <p class="ratings">Ratings: 8.8/10.0</p>
                     <p class="stars">⭐⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('7')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('MSI G66')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('MSI G66', 1350)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -218,7 +218,7 @@
                     <p class="ratings">Ratings: 6.7/10.0</p>
                     <p class="stars">⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('8')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo ThinkPad')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('Lenovo ThinkPad', 300)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -238,7 +238,7 @@
                     <p class="ratings">Ratings: 10.0/10.0</p>
                     <p class="stars">⭐⭐⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('9')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('ASUS TUF')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('ASUS TUF', 2000)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
@@ -258,7 +258,7 @@
                     <p class="ratings">Ratings: 9.2/10.0</p>
                     <p class="stars">⭐⭐⭐</p>
                     <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('10')" class=linktext value="Close Window">
-                    <input class="close-but" type="button" onclick="add_to_cart('Dell G16')" value="Add to Cart"/>
+                    <input class="close-but" type="button" onclick="add_to_cart('Dell G16', 1500)" value="Add to Cart"/>
                 </center>
             </p>
         </div>
