@@ -1,0 +1,27 @@
+#login-form{
+	display: flex;
+	flex-direction: column;
+}
+
+#holder{
+	width: 20%;
+	margin: auto;
+	margin-top: 10%;
+	font-size: 24px;
+	background-color: white;
+	padding: 15px;
+	border-radius: 8px;
+}
+
+#login-but{
+	margin-top: 10px;
+}
+
+#login-bod{
+	background-color: royalblue;
+}
+
+#captc{
+	margin: auto;
+	background-color: white;
+}
