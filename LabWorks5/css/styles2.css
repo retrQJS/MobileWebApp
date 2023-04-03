@@ -1,0 +1,109 @@
+ul {
+	background-color: white;
+	height: 55px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+li a, .drp {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 2px solid whitesmoke;
+	margin-bottom: -10px;
+	background-color: white;
+}
+
+	li a:hover {
+		text-decoration: underline;
+		color: #CE5846;
+	}
+
+.menu-content {
+	display: none;
+	position: absolute;
+	background-color: #f8f8f8;
+	z-index: 1;
+}
+
+	.menu-content a {
+		color: black;
+		padding: 12px 16px;
+		display: block;
+	}
+
+.menu-item:hover .menu-content {
+	display: block;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 16px;
+	background-color: white;
+}
+
+#banner{
+	text-align: center;
+}
+
+#holderD{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#holderD2 {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: white;
+	border-radius: 8px;
+	width: 20%;
+	margin: auto;
+	padding: 10px;
+	margin-top: 30px;
+}
+
+
+.child {
+	margin: auto;
+	display: inline-block;
+	height: 150%;
+	background-color: white;
+	padding: 10px; 
+	border-radius: 8px;
+}
+
+#section-head{
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.textbox {
+	width: 250px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.sectionz{
+	background-color: royalblue;
+}
+
+#fullban{
+	color: white;
+	margin-bottom:15px;
+}
+
+.jbu-title{
+	color: white;
+}
