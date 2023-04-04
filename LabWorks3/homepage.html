@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css"/>
     <script src="./js/script.js"></script>
+    <script src="./js/app1.js"></script>
     <title>ROBSTORE | Online Shopping Store</title>
 </head>
 <body>
@@ -13,18 +15,20 @@
         <img id="logo" src="./images/divshopping.png"/>
         <input id="cart" type="button" onclick="popupfunction(11)" value="🛒Cart">
     </div>
-    <div id="popup11" class="white_content">
-        <p align=center><br><br>
-            <center>
-                <p id="cart-title"><strong>CART:</strong></p>
-                <textarea id="cart-items"></textarea>
-            </center>
-                <p class="inline" id="total">Total($): </p>
-                <p class="inline" id="amount">0</p>
-            <center>
-                <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('11')" class=linktext value="Close Cart">
-            </center>
-        </p>
+    <div ng-app='myApp' id="popup11" class="white_content">
+        <div ng-controller="myCtrl">
+            <p align=center><br><br>
+                <center>
+                    <p id="cart-title"><strong>CART:</strong></p>
+                    <textarea id="cart-items"></textarea>
+                </center>
+                    <p class="inline" id="total">Total($): </p>
+                    <p class="inline" id="amount">{{total}}</p>
+                <center>
+                    <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('11')" class=linktext value="Close Cart">
+                </center>
+            </p>
+        </div>
     </div>
     <div id="fade11" class="black_content"></div>
     <div id="menu">
@@ -62,7 +66,7 @@
             </ul>
         </center>
     </div>
-    <div class="parent">
+    <div ng-app='myApp' class="parent">
         <!--Box 1-->
         <div class="box" onclick="popupfunction(1)">
             <center>
@@ -70,7 +74,7 @@
                 <p class="bot-text">Mac Book Air</p>
             </center>
         </div>
-	    <div id="popup1" class="white_content">
+        <div id="popup1" class="white_content">
         <p align=center><br><br>
             <center>
             <img class="window-img"src="./images/laptop1.jpg" width=60% /><br>Mac Book Air<br><br>
@@ -78,7 +82,7 @@
             <p class="ratings">Ratings: 8.9/10.0</p>
             <p class="stars">⭐⭐⭐⭐⭐</p>
             <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('1')" class=linktext value="Close Window">
-            <input class="close-but" type="button" onclick="add_to_cart('Mac Book Air', 800)" value="Add to Cart"/>
+            <input class="close-but" type="button" ng-click='addToCart(800)' onclick="add_to_cart('Mac Book Air', 800)" value="Add to Cart"/>
             </center>
             </p>
         </div>
@@ -119,11 +123,11 @@
                 <p class="stars">⭐⭐</p>
                 <input class="close-but" type="button" href = "javascript:void(0)" onclick = "popupclose('3')" class=linktext value="Close Window">
                 <input class="close-but" type="button" onclick="add_to_cart('Acer S15', 744)" value="Add to Cart"/>
-                 </center>
+                </center>
             </p>
         </div>
         <div id="fade3" class="black_content"></div>
-         <!--Box 4-->
+        <!--Box 4-->
         <div class="box" onclick="popupfunction(4)">
             <center>
                 <img id="surface" class="image-width" src="./images/surface.png">
@@ -143,7 +147,7 @@
             </p>
         </div>
         <div id="fade4" class="black_content"></div>
-         <!--Box 5-->
+        <!--Box 5-->
         <div class="box" onclick="popupfunction(5)">
             <center>
                 <img id="lenovo" class="image-width" src="./images/lenovo.png">
@@ -163,7 +167,7 @@
             </p>
         </div>
         <div id="fade5" class="black_content"></div>
-         <!--Box 6-->
+        <!--Box 6-->
         <div class="box" onclick="popupfunction(6)">
             <center>
                 <img class="image-width" src="./images/gamer.jpg">
@@ -183,7 +187,7 @@
             </p>
         </div>
         <div id="fade6" class="black_content"></div>
-         <!--Box 7-->
+        <!--Box 7-->
         <div class="box" onclick="popupfunction(7)">
             <center>
                 <img class="image-width" src="./images/msi.jpg">
@@ -203,7 +207,7 @@
             </p>
         </div>
         <div id="fade7" class="black_content"></div>
-         <!--Box 8-->
+        <!--Box 8-->
         <div class="box" onclick="popupfunction(8)">
             <center>
                 <img class="image-width" src="./images/thinkpad.jpg">
@@ -223,7 +227,7 @@
             </p>
         </div>
         <div id="fade8" class="black_content"></div>
-         <!--Box 9-->
+        <!--Box 9-->
         <div class="box" onclick="popupfunction(9)">
             <center>
                 <img class="image-width" src="./images/tuf.jpg">
@@ -243,7 +247,7 @@
             </p>
         </div>
         <div id="fade9" class="black_content"></div>
-         <!--Box 10-->
+        <!--Box 10-->
         <div class="box" onclick="popupfunction(10)">
             <center>
                 <img class="image-width" src="./images/G16.jpg">
@@ -263,6 +267,6 @@
             </p>
         </div>
         <div id="fade10" class="black_content"></div>
-      </div>
+    </div>
 </body>
 </html>
